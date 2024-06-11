@@ -1,0 +1,87 @@
+// Variáveis
+@primary-color: #333;
+@secondary-color: #fff;
+@accent-color: #f90;
+@font-family: Arial, sans-serif;
+@padding: 1em;
+@border-color: #ccc;
+
+body {
+    font-family: @font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: @primary-color;
+    color: @secondary-color;
+    padding: @padding 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: @secondary-color;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.product {
+    border: 1px solid @border-color;
+    padding: @padding;
+    text-align: center;
+    width: 200px;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        background-color: @accent-color;
+        border: none;
+        color: @secondary-color;
+        padding: 0.5em;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(@accent-color, 10%);
+        }
+    }
+}
+
+footer {
+    background-color: @primary-color;
+    color: @secondary-color;
+    text-align: center;
+    padding: @padding 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
